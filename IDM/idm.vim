@@ -8,6 +8,10 @@ syn keyword Keyword arg-string
 syn keyword Keyword if-operation
 syn keyword Keyword if-class-name
 
+syn keyword xmlAttr modify-attr contained
+syn keyword xmlAttr add-attr contained
+syn keyword xmlAttr read-attr contained
+
 syn match Boolean /\vTRUE|FALSE/
 
 syn region string1 start="\v\'" end="\v\'" contained
@@ -17,7 +21,8 @@ syn region ifRegion start="\v\s+\(" end="\v\)" contains=string1,string2,Keyword
 syn match ruleSelected /Rule selected/
 syn match ruleRejected /Rule rejected/
 
-syn region xmlRegion start="\v\<" end="\v\>" fold contains=string1,string2
+
+syn region xmlRegion start="\v\<" end="\v\>" fold contains=string1,string2,xmlAttr
 syn match evaluatingRule /Evaluating selection criteria for rule \'.*\'/ contains=string1
 syn match applyingRule /Applying rule \'.*\'/ contains=string1
 syn region statusLog start="\vDirXML Log" end="\vStatus:" fold
@@ -35,3 +40,4 @@ hi def link evaluatingRule PreCondit
 hi def link applyingRule Function
 hi def link policyName Underlined
 hi def link statusLog Debug
+hi def link xmlAttr StorageClass
