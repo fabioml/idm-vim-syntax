@@ -1,5 +1,5 @@
 # Introduction #
-This is a colaborative** syntax highlight** for VIM.
+This is a colaborative project for ** syntax highlight** for VIM.
 
 It can to be used for** Identity Manager** (Netiq) and **Oracle Identity Manager** (OIM). 
 
