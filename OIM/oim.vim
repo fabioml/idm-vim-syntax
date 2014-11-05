@@ -15,7 +15,8 @@ syn match Function /\v\[(\w+\.+)+\w+\]/
 " orchestration number action like: 
 "	125,044.0.RoleUser.DELETE or
 "	125,045.0.Resource.ACCESS_POLICY_BASED_PROVISION
-syn match Constant /\v\d+\,*\d*\.\d+\.\a+\.\a+(_+\a+)*/
+"	62,409.504,727.User.MODIFY
+syn match Constant /\v\d+\,*\d*\.\d+\,*\d*\.\a+\.\a+(_+\a+)*/
 " adpters execption like: .adpADIDCUPDATECHILDTABLEVALUES.
 "syn match adpter /\v\.adp.*\./ contained
 syn match adpter /\v\.adp[^\.]+/ contained
